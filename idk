@@ -1,0 +1,96 @@
+
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+
+
+
+local X = Material.Load({
+	Title = "ez",
+	Style = 2,
+	SizeX = 250,
+	SizeY = 155,
+	Theme = "Light",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(235,235,235)
+	}
+})
+
+local Y = X.New({
+	Title = "ok"
+})
+
+
+
+
+
+
+
+
+
+
+    local a = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+function doPrint()
+  while Toggle and wait() do
+
+
+a.CFrame = CFrame.new(-50.5819473, 105.041832, -16.8379021, 0.999719501, -0.000951136346, 0.0236638878, -1.21040226e-11, 0.999193192, 0.0401611514, -0.0236829948, -0.0401498862, 0.99891299)
+
+wait(0.1)
+a.CFrame = CFrame.new(-67.0671463, 105.209587, -9.33137131, 0.9979617, -0.00456868345, 0.0636523366, 6.08837591e-10, 0.99743402, 0.0715913996, -0.0638160855, -0.0714454725, 0.995400965)
+
+wait(0.1)
+a.CFrame = CFrame.new(-83.7277298, 106.034065, -8.90154743, 0.999416411, -0.00170243531, 0.0341157094, 7.58938953e-11, 0.998757243, 0.0498397835, -0.034158159, -0.0498106964, 0.998174369)
+
+wait(0.1)
+
+a.CFrame = CFrame.new(-87.4905472, 99.9999771, -8.61827087, 0.999355257, -2.37725448e-08, 0.0359039009, 2.34869493e-08, 1, 8.37621084e-09, -0.0359039009, -7.5275377e-09, 0.999355257)
+
+wait(0.1)
+
+a.CFrame = CFrame.new(-43.0641861, 99.9999771, -15.0051603, 0.999952853, 9.68012444e-08, 0.00971005857, -9.73132401e-08, 1, 5.22558565e-08, -0.00971005857, -5.31983098e-08, 0.999952853)
+
+wait(0.1)
+end
+end
+
+local A = Y.Toggle({
+    Text = "secret",
+    Callback = function(Value)
+      Toggle = Value
+      doPrint()
+    end,
+    Enabled = false
+})
+
+
+local B = Y.Button({
+	Text = "reload",
+	Callback = function()
+		
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "reaload"
+			})
+		end
+	}
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
