@@ -67,7 +67,7 @@ local A = Y.Toggle({
 local B = Y.Button({
 	Text = "reload",
 	Callback = function()
-		loadstring(game:HttpGet(''))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Insanxty/idk/main/idk'))()
 	end,
 	Menu = {
 		Information = function(self)
