@@ -74,7 +74,7 @@ local A = Y.Toggle({
 function doPrint2()
   while Toggle and wait() do
 local CFrameEnd = CFrame.new(-43.4629097, 106.5317, -13.1015997, 0.999947309, 3.48868707e-05, -0.010265341, -7.0714489e-12, 0.999994218, 0.0033984906, 0.0102653997, -0.00339831156, 0.999941528) -- Place your coords in here
-local Time = 0.5 -- Time in seconds
+local Time = 5 -- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 tween:Play()
 tween.Completed:Wait()
@@ -82,7 +82,7 @@ tween.Completed:Wait()
 
 
 local CFrameEnd = CFrame.new(-87.2056351, 107.729202, -12.3772087, 0.999985099, 0.000117068652, 0.00545316329, 4.72242037e-13, 0.999769628, -0.0214630794, -0.00545442011, 0.0214627609, 0.999754786) -- Place your coords in here
-local Time = 0.5 -- Time in seconds
+local Time = 5 -- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 tween:Play()
 tween.Completed:Wait()
