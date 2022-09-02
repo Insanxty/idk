@@ -98,7 +98,7 @@ local A = Y.Toggle({
     Text = "secret v.2",
     Callback = function(Value)
       Toggle = Value
-      doPrint2()
+      doPrint3()
     end,
     Enabled = false
 })
@@ -106,7 +106,7 @@ local A = Y.Toggle({
 
 
 
-function doPrint2()
+function doPrint3()
   while Toggle and wait() do
 local CFrameEnd = CFrame.new(33.6694107, 269.691162, -149.096878, -0.776936531, -0.1748254, 0.604818761, 2.01851442e-08, 0.960671842, 0.277686238, -0.629578948, 0.2157446, -0.746381044) -- Place your coords in here
 local Time = 0.5 -- Time in seconds
