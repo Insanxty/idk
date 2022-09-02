@@ -98,7 +98,7 @@ local A = Y.Toggle({
     Text = "secret v.2",
     Callback = function(Value)
       Toggle = Value
-      doPrint3()
+      doPrint2()
     end,
     Enabled = false
 })
@@ -362,7 +362,7 @@ local A = Y.Toggle({
     Text = "anime moment",
     Callback = function(Value)
       Toggle = Value
-      doPrint2()
+      doPrint3()
     end,
     Enabled = false
 })
