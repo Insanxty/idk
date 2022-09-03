@@ -1,3 +1,79 @@
+
+
+
+
+
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local status = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local main = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.796850383, 0, 0, 0)
+Frame.Size = UDim2.new(0, 258, 0, 99)
+
+status.Name = "status"
+status.Parent = Frame
+status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+status.BackgroundTransparency = 1.000
+status.Position = UDim2.new(0.1111665, 0, 0.366850138, 0)
+status.Size = UDim2.new(0, 200, 0, 50)
+status.Font = Enum.Font.SciFi
+status.Text = "waiting"
+status.TextColor3 = Color3.fromRGB(145, 145, 145)
+status.TextScaled = true
+status.TextSize = 14.000
+status.TextTransparency = 1.000
+status.TextWrapped = true
+
+UICorner.Parent = Frame
+
+main.Name = "main"
+main.Parent = Frame
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.BackgroundTransparency = 1.000
+main.Position = UDim2.new(0.0271317828, 0, 0.0606060624, 0)
+main.Size = UDim2.new(0, 84, 0, 24)
+main.Font = Enum.Font.JosefinSans
+main.Text = "status:"
+main.TextColor3 = Color3.fromRGB(145, 145, 145)
+main.TextScaled = true
+main.TextSize = 14.000
+main.TextTransparency = 1.000
+main.TextWrapped = true
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.BorderColor3 = Color3.fromRGB(186, 186, 186)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.306244195, 0)
+Frame_2.Size = UDim2.new(0, 258, 0, 0)
+
+
+
+
+
+
+
+
+
+
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 
@@ -15,7 +91,7 @@ local X = Material.Load({
 })
 
 local Y = X.New({
-	Title = "ok"
+	Title = "badass moments"
 })
 
 
@@ -31,7 +107,7 @@ local Y = X.New({
 
 function doPrint()
   while Toggle and wait() do
-
+status.Text = ("this method is not recommended")
 
 a.CFrame = CFrame.new(-42.5035591, 106.653534, -14.241291, 0.999996305, -6.3757303e-05, 0.00272321142, -1.25047793e-11, 0.999726057, 0.0234061331, -0.00272395764, -0.0234060455, 0.999722302)
 
@@ -56,13 +132,13 @@ a.CFrame = CFrame.new(-76.1781006, 103.969536, -14.948082, 0.999954879, -8.95960
 wait(0.1)
 
 a.CFrame = CFrame.new(-89.1123734, 105.209747, -18.8395958, 0.999954879, -0.000207767676, -0.00949975662, -2.93249626e-11, 0.999760926, -0.0218656175, 0.00950202812, 0.0218646303, 0.999715805)
-
+status.Text = ("waiting...")
 wait(0.1)
 end
 end
 
 local A = Y.Toggle({
-    Text = "secret",
+    Text = "tower fling v.1",
     Callback = function(Value)
       Toggle = Value
       doPrint()
@@ -73,7 +149,17 @@ local A = Y.Toggle({
 
 function doPrint2()
   while Toggle and wait() do
-local CFrameEnd = CFrame.new(-43.4629097, 106.5317, -13.1015997, 0.999947309, 3.48868707e-05, -0.010265341, -7.0714489e-12, 0.999994218, 0.0033984906, 0.0102653997, -0.00339831156, 0.999941528) -- Place your coords in here
+      
+      status.Text = ("doing to magic for you...")
+local CFrameEnd = CFrame.new(-88.9702072, 99.9999771, -5.68678665, 0.999961853, 0, 0.00873184018, 0, 1, 0, -0.00873184018, 0, 0.999961853) -- Place your coords in here
+local Time = 5 -- Time in seconds
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
+tween:Play()
+tween.Completed:Wait()
+
+status.Text = ("Hold on...")
+
+local CFrameEnd = CFrame.new(-42.5728302, 99.9999771, -6.09732914, 0.999961853, 0, 0.00873181969, 0, 1, 0, -0.00873181969, 0, 0.999961853) -- Place your coords in here
 local Time = 5 -- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 tween:Play()
@@ -81,21 +167,13 @@ tween.Completed:Wait()
 
 
 
-local CFrameEnd = CFrame.new(-87.2056351, 107.729202, -12.3772087, 0.999985099, 0.000117068652, 0.00545316329, 4.72242037e-13, 0.999769628, -0.0214630794, -0.00545442011, 0.0214627609, 0.999754786) -- Place your coords in here
-local Time = 5 -- Time in seconds
-local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
-tween:Play()
-tween.Completed:Wait()
-
-
-
-
+status.Text = ("waiting...")
 
 end
 end
 
 local A = Y.Toggle({
-    Text = "secret v.2",
+    Text = "tower fling v.2",
     Callback = function(Value)
       Toggle = Value
       doPrint2()
@@ -108,6 +186,8 @@ local A = Y.Toggle({
 
 function doPrint3()
   while Toggle and wait() do
+      
+      status.Text = ("cutting the tower in half")
 local CFrameEnd = CFrame.new(33.6694107, 269.691162, -149.096878, -0.776936531, -0.1748254, 0.604818761, 2.01851442e-08, 0.960671842, 0.277686238, -0.629578948, 0.2157446, -0.746381044) -- Place your coords in here
 local Time = 0.5 -- Time in seconds
 local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
@@ -216,7 +296,7 @@ local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.C
 tween:Play()
 tween.Completed:Wait()
 
-
+    status.Text = ("going faster")
 -------------------------------------------------------------------------
 
 
@@ -333,7 +413,7 @@ local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.C
 tween:Play()
 tween.Completed:Wait()
 
-
+    status.Text = ("waiting...")
 
 
 
@@ -359,7 +439,7 @@ end
 end
 
 local A = Y.Toggle({
-    Text = "anime moment",
+    Text = "anime tower fling",
     Callback = function(Value)
       Toggle = Value
       doPrint3()
@@ -373,14 +453,15 @@ local A = Y.Toggle({
 
 
 local B = Y.Button({
-	Text = "reload",
+	Text = "Update",
 	Callback = function()
+	 ScreenGui:remove()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Insanxty/idk/main/idk'))()
 	end,
 	Menu = {
 		Information = function(self)
 			X.Banner({
-				Text = "reaload"
+				Text = "updates the script"
 			})
 		end
 	}
@@ -394,6 +475,18 @@ local B = Y.Button({
 
 
 
+
+game:GetService("TweenService"):Create(Frame, TweenInfo.new(1), { BackgroundTransparency = 0 }):Play()
+
+wait(0.1)
+game:GetService("TweenService"):Create(main, TweenInfo.new(1), { TextTransparency = 0 }):Play()
+wait(0.1)
+game:GetService("TweenService"):Create(Frame_2, TweenInfo.new(1), { BorderSizePixel = 1 }):Play()
+wait(0.1)
+game:GetService("TweenService"):Create(status, TweenInfo.new(1), { TextTransparency = 0 }):Play()
+wait(0.1)
+
+game:GetService("TweenService"):Create(status, TweenInfo.new(1), { Text = ("test") }):Play()
 
 
 
