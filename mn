@@ -592,7 +592,7 @@ a:Script({
     Short_Description = 'the recommended hub!',
     Long_Description = 'This is a paid hub, but it is cracked cause i felt like it, anyways this hub features, auto buy, free macro, aim locks & more!',
     Script = function()
-        loadstring(game:HttpGet(("https://pastebin.com/raw/VXKZpP6L"), true))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/CorruptOblivion/Oblivion/main/loader.lua"), true))()
     end
 })
 
@@ -4823,6 +4823,17 @@ a:Script({
     Long_Description = 'This script boosts your FPS in every game by making it look worse',
     Script = function()
         loadstring(game:HttpGet(("https://pastebin.com/raw/xZA18K77"), true))()
+    end
+})
+
+
+a:Script({
+    Image = '11441330700',
+    Name = 'Fps Unlocker',
+    Short_Description = 'Unlocks your fps',
+    Long_Description = 'allows you to have a smooth experience at 120 fps instead of 60!',
+    Script = function()
+       loadstring(game:HttpGet("https://fpsplus.000webhostapp.com/OBFUSCATED_SOURCE_FPSPLUS.lua", true))()
     end
 })
 
