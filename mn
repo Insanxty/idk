@@ -3,7 +3,7 @@ if game.PlaceId == 5602055394 then
 
 notifications:notify{
     Title = "Insanity's private hub",
-    Description = "Would you like to load Oblivion cracked?, and purple lock? hover your mouse on top of someone and press q to lock (Do not press the button more than 1 time!",
+    Description = "Would you like to load Oblivion cracked? (Do not press the button more than 1 time!",
     Accept = {
     Text = "Yes",
         Callback = function()
