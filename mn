@@ -76,7 +76,7 @@ notifications:notify{
     Text = "Yes",
         Callback = function()
            
-            loadstrinag(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+            loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
         end,
     },
     Dismiss = {
