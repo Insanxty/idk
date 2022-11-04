@@ -1,12 +1,222 @@
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
+local Window = Lib:Window("Insanity's Private Hub", "Main", Enum.KeyCode.RightShift)
+local Test = Window:Tab("FUN")
+local Test2 = Window:Tab("DHM")
+local Test3 = Window:Tab("Admins")
 local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
-if game.PlaceId == 5602055394 then
+
+
+
+
+Test:Button("Net Bypass", function()
+   
 
 notifications:notify{
     Title = "Insanity's private hub",
-    Description = "Would you like to load Oblivion cracked? (Do not press the button more than 1 time!",
+    Description = "After you confirm please do not move for 5 seconds...",
     Accept = {
     Text = "Yes",
         Callback = function()
+           
+           
+           for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+game:GetService("RunService").Heartbeat:connect(function()
+v.Velocity = Vector3.new(0,35,0)
+wait(0.5)
+end)
+end
+end
+ 
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Notification";
+	Text = "Netless activated";
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 16;
+           
+           
+           
+           
+           
+           
+           
+           
+            
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test:Button("Walk On walls", function()
+   
+
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "After you confirm please do not move for 5 seconds...",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+           
+            loadstrinag(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
+
+
+
+
+Test:Button("BALLER", function()
+   
+
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "You will need the Red Stickman Head (55 R$) to use this else it will not work",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+           
+            --by Scriptifer#9511
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Lowerrated/roblox-fe-baller-script/main/main"))()
+--https://www.roblox.com/catalog/6685365462/Red-Stickman-Head
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test3:Button("Fates Admin", function()
+   
+
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "Load?",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+           
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
+
+Test3:Button("infiniteyield", function()
+   
+
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "Load?",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+           
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
+
+
+Test2:Button("KARMAWARE", function()
+   
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "Load?",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+           
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/rizOWNSYOU/karmaware-obf/main/KARMA"))()
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
+
+
+
+
+
+
+
+Test2:Button("Oblivion Cracked", function()
+   
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "Load?",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+           
             loadstring(game:HttpGet(("https://raw.githubusercontent.com/CorruptOblivion/Oblivion/main/loader.lua"), true))()
         end,
     },
@@ -17,5 +227,8 @@ notifications:notify{
         end,
     }
 }
+end)
 
-end
+
+
+
