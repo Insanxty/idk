@@ -1,0 +1,277 @@
+--Ragdoll
+--Made by server side script please credit!
+--x, c are the controls!
+ 
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local BlueSlide = Instance.new("Frame")
+local script = Instance.new("TextLabel")
+local hot = Instance.new("TextButton")
+local scriptname = Instance.new("TextLabel")
+local hot2 = Instance.new("TextButton")
+local scriptname2 = Instance.new("TextLabel")
+local reset = Instance.new("TextButton")
+local exe = Instance.new("TextButton")
+ 
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+ 
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Frame.BackgroundTransparency = 0.200
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0358231701, 0, 0.0907975435, 0)
+Frame.Size = UDim2.new(0, 372, 0, 666)
+ 
+BlueSlide.Name = "Blue Slide"
+BlueSlide.Parent = Frame
+BlueSlide.BackgroundColor3 = Color3.fromRGB(16, 32, 255)
+BlueSlide.BackgroundTransparency = 0.300
+BlueSlide.BorderSizePixel = 0
+BlueSlide.Position = UDim2.new(-0.0268817209, 0, 0, 0)
+BlueSlide.Size = UDim2.new(0, 10, 0, 666)
+ 
+script.Name = "script"
+script.Parent = Frame
+script.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+script.BackgroundTransparency = 1.000
+script.Position = UDim2.new(0.155913979, 0, 0.0300300308, 0)
+script.Size = UDim2.new(0, 255, 0, 50)
+script.Font = Enum.Font.ArialBold
+script.Text = "Death Hub"
+script.TextColor3 = Color3.fromRGB(114, 138, 245)
+script.TextScaled = true
+script.TextSize = 14.000
+script.TextWrapped = true
+ 
+hot.Name = "hot"
+hot.Parent = Frame
+hot.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+hot.BorderSizePixel = 0
+hot.Position = UDim2.new(0.0698924735, 0, 0.202702701, 0)
+hot.Size = UDim2.new(0, 52, 0, 52)
+hot.Font = Enum.Font.SourceSans
+hot.Text = ""
+hot.TextColor3 = Color3.fromRGB(0, 0, 0)
+hot.TextScaled = true
+hot.TextSize = 14.000
+hot.TextWrapped = true
+ 
+scriptname.Name = "scriptname"
+scriptname.Parent = Frame
+scriptname.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptname.BackgroundTransparency = 1.000
+scriptname.Position = UDim2.new(0.284946233, 0, 0.204204202, 0)
+scriptname.Size = UDim2.new(0, 238, 0, 50)
+scriptname.Font = Enum.Font.GothamBlack
+scriptname.Text = "Permadeath"
+scriptname.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptname.TextScaled = true
+scriptname.TextSize = 14.000
+scriptname.TextWrapped = true
+scriptname.TextXAlignment = Enum.TextXAlignment.Left
+ 
+hot2.Name = "hot2"
+hot2.Parent = Frame
+hot2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+hot2.BorderSizePixel = 0
+hot2.Position = UDim2.new(0.0698924735, 0, 0.331831843, 0)
+hot2.Size = UDim2.new(0, 52, 0, 52)
+hot2.Font = Enum.Font.SourceSans
+hot2.Text = ""
+hot2.TextColor3 = Color3.fromRGB(0, 0, 0)
+hot2.TextScaled = true
+hot2.TextSize = 14.000
+hot2.TextWrapped = true
+ 
+scriptname2.Name = "scriptname2"
+scriptname2.Parent = Frame
+scriptname2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptname2.BackgroundTransparency = 1.000
+scriptname2.Position = UDim2.new(0.284946233, 0, 0.333333343, 0)
+scriptname2.Size = UDim2.new(0, 238, 0, 50)
+scriptname2.Font = Enum.Font.GothamBlack
+scriptname2.Text = "Ragdoll"
+scriptname2.TextColor3 = Color3.fromRGB(255, 255, 255)
+scriptname2.TextScaled = true
+scriptname2.TextSize = 14.000
+scriptname2.TextWrapped = true
+scriptname2.TextXAlignment = Enum.TextXAlignment.Left
+ 
+reset.Name = "reset"
+reset.Parent = Frame
+reset.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+reset.BorderSizePixel = 0
+reset.Position = UDim2.new(0.072580643, 0, 0.521021008, 0)
+reset.Size = UDim2.new(0, 318, 0, 61)
+reset.Font = Enum.Font.SourceSansBold
+reset.Text = "Reset"
+reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+reset.TextScaled = true
+reset.TextSize = 14.000
+reset.TextWrapped = true
+ 
+exe.Name = "exe"
+exe.Parent = Frame
+exe.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+exe.BorderSizePixel = 0
+exe.Position = UDim2.new(0.072580643, 0, 0.686186194, 0)
+exe.Size = UDim2.new(0, 318, 0, 61)
+exe.Font = Enum.Font.SourceSansBold
+exe.Text = "Execute"
+exe.TextColor3 = Color3.fromRGB(255, 255, 255)
+exe.TextScaled = true
+exe.TextSize = 14.000
+exe.TextWrapped = true
+ 
+-- Scripts:
+ 
+local function FTGPHM_fake_script() -- hot.LocalScript 
+    local script = Instance.new('LocalScript', hot)
+ 
+    _G.ButtonOn = false
+    
+    script.Parent.MouseButton1Down:Connect(function()
+        if _G.ButtonOn == false then
+            _G.ButtonOn = true
+            script.Parent.BackgroundColor3 = Color3.new(0,223,0)
+            --
+            
+            --
+        else
+            _G.ButtonOn = false
+            script.Parent.BackgroundColor3 = Color3.new(0,0,0)
+        end
+    end)
+end
+coroutine.wrap(FTGPHM_fake_script)()
+local function MKUDGSX_fake_script() -- hot2.LocalScript 
+    local script = Instance.new('LocalScript', hot2)
+ 
+    _G.ButtonOn2 = false
+    
+    script.Parent.MouseButton1Down:Connect(function()
+        if _G.ButtonOn2 == false then
+            _G.ButtonOn2 = true
+            script.Parent.BackgroundColor3 = Color3.new(0,223,0)
+            --
+            
+            --
+        else
+            _G.ButtonOn2 = false
+            script.Parent.BackgroundColor3 = Color3.new(0,0,0)
+        end
+    end)
+end
+coroutine.wrap(MKUDGSX_fake_script)()
+local function CZII_fake_script() -- Frame.LocalScript 
+    local script = Instance.new('LocalScript', Frame)
+ 
+    script.Parent.Active = true
+    script.Parent.Draggable = true
+end
+coroutine.wrap(CZII_fake_script)()
+local function DSFKML_fake_script() -- reset.LocalScript 
+    local script = Instance.new('LocalScript', reset)
+ 
+    script.Parent.MouseButton1Down:Connect(function()
+        game.Players.LocalPlayer.Character:Destroy()
+    end)
+end
+coroutine.wrap(DSFKML_fake_script)()
+local function FVXX_fake_script() -- exe.LocalScript 
+    local script = Instance.new('LocalScript', exe)
+ 
+    script.Parent.MouseButton1Down:Connect(function()
+        
+        if _G.ButtonOn == true then
+            print("on")
+            --
+            local p = game.Players.LocalPlayer
+            local c = p.Character
+            local m = Instance.new("Model",c)
+            m.Name = "Fake Character"
+            local t = Instance.new("Part",m)
+            t.Name = "Torso"
+            t.Position = c.HumanoidRootPart.Position
+            local h = Instance.new("Part",m)
+            h.Name = "Head"
+            h.Position = c.HumanoidRootPart.Position
+            local hum = Instance.new("Humanoid",m)
+            p.Character = m
+            wait(3)
+            p.Character = c
+            wait(3)
+            p.Character.Humanoid.Health = 0
+            --
+        else
+            print("off")
+        end
+        
+        if _G.ButtonOn2 == true then
+            print("on")
+            --
+    
+    
+            local Player = game.Players.LocalPlayer.Character
+            local Rope = Instance.new("RopeConstraint",Player["Left Arm"])
+            Player["Right Leg"].RightFootAttachment.Position = Player["Right Leg"].RightFootAttachment.Position + Vector3.new(0,1.1,0)
+            Player["Left Leg"].LeftFootAttachment.Position = Player["Left Leg"].LeftFootAttachment.Position + Vector3.new(0,1.1,0)
+            Player["Head"].HairAttachment.Position = Player["Head"].HairAttachment.Position + Vector3.new(0,.1,0)
+            Rope.Attachment0 = Player["Left Arm"].LeftShoulderAttachment
+            Rope.Attachment1 = Player.Torso.LeftCollarAttachment
+            Rope.Length = .1
+    
+    
+            local Rope = Instance.new("RopeConstraint",Player["Right Arm"])
+            Rope.Attachment0 = Player["Right Arm"].RightShoulderAttachment
+            Rope.Attachment1 = Player.Torso.RightCollarAttachment
+            Rope.Length = .1
+    
+    
+            local Rope = Instance.new("RopeConstraint",Player["Right Leg"])
+            Rope.Attachment0 = Player["Right Leg"].RightFootAttachment
+            Rope.Attachment1 = Player.Torso.WaistCenterAttachment
+            Rope.Length = 1
+    
+    
+            local Rope = Instance.new("RopeConstraint",Player["Left Leg"])
+            Rope.Attachment0 = Player["Left Leg"].LeftFootAttachment
+            Rope.Attachment1 = Player.Torso.WaistCenterAttachment
+            Rope.Length = 1
+    
+    
+            local Rope = Instance.new("RopeConstraint",Player["Head"])
+            Rope.Attachment0 = Player["Head"].HairAttachment
+            Rope.Attachment1 = Player.Torso.NeckAttachment
+            Rope.Length = .1
+            Player["Head"]:BreakJoints()
+            Player["Head"].face:destroy()
+    
+            
+            --
+        else
+            print("off")
+        end
+        
+    end)
+    
+end
+coroutine.wrap(FVXX_fake_script)()
+ScreenGui.Enabled = false
+ 
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+ 
+mouse.KeyDown:connect(function(key)
+    if key == "x" then
+        ScreenGui.Enabled = true
+        workspace.Camera.CameraType = "Fixed"
+    end
+end)
+mouse.KeyDown:connect(function(key)
+    if key == "c" then
+        ScreenGui.Enabled = false
+        workspace.Camera.CameraType = "Custom"
+    end
+end)
