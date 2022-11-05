@@ -3,6 +3,7 @@ local Window = Lib:Window("Insanity's Private Hub", "Main", Enum.KeyCode.RightSh
 local Test = Window:Tab("FUN")
 local Test2 = Window:Tab("DHM")
 local Test3 = Window:Tab("Admins")
+local Test4 = Window:Tab("CW")
 local notifications = loadstring(game:HttpGet(("https://raw.githubusercontent.com/AbstractPoo/Main/main/Notifications.lua"),true))()
 
 
@@ -54,6 +55,26 @@ Duration = 16;
 end)
 
 
+Test4:Button("Nethub", function()
+   
+
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "Load?",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Insanxty/idk/main/cw"))()
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
 
 
 
