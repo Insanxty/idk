@@ -76,7 +76,26 @@ notifications:notify{
 }
 end)
 
+Test:Button("Invisible fling", function()
+   
 
+notifications:notify{
+    Title = "Insanity's private hub",
+    Description = "Load?",
+    Accept = {
+    Text = "Yes",
+        Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Insanxty/idk/main/fling"))()
+        end,
+    },
+    Dismiss = {
+        Text = "No",
+        Callback = function()
+            print("Declined")
+        end,
+    }
+}
+end)
 
 
 
